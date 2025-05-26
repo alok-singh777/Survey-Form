@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Feedback Survey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 id="title">Customer Feedback Survey</h1>
+  <p id="description">Please fill out this survey to help us improve our services.</p>
+
+  <!-- Survey Form -->
+  <form id="survey-form">
+
+    <!-- Basic Info Fields -->
+    <label id="name-label" for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+    <label id="email-label" for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+    <label id="number-label" for="number">Age:</label>
+    <input type="number" id="number" name="age" min="10" max="100" placeholder="Enter your age" required>
+
+    <!-- Dropdown Selection -->
+    <label for="dropdown">Which option best describes you?</label>
+    <select id="dropdown" name="role">
+      <option value="student">Student</option>
+      <option value="professional">Professional</option>
+    </select>
+
+    <!-- Recommendation Section -->
+    <fieldset>
+      <legend>Would you recommend us?</legend>
+      <label>
+        <input type="radio" name="recommend" value="yes"> Yes
+      </label>
+      <label>
+        <input type="radio" name="recommend" value="no"> No
+      </label>
+    </fieldset>
+
+    <!-- Features Section -->
+    <fieldset>
+      <legend>Which features do you use?</legend>
+      <label>
+        <input type="checkbox" name="features" value="chat"> Live Chat
+      </label>
+      <label>
+        <input type="checkbox" name="features" value="email"> Email Support
+      </label>
+      <label>
+        <input type="checkbox" name="features" value="phone"> Phone Support
+      </label>
+    </fieldset>
+
+    <!-- Additional Comments -->
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" name="comments" placeholder="Your feedback here..."></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit" id="submit">Submit</button>
+  </form>
+
+  <!-- Hidden confirmation message (shows after submission) -->
+  <div id="confirmation-message">
+    Thank you! Your feedback has been submitted.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
